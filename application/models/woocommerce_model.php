@@ -697,7 +697,7 @@ class Woocommerce_model extends CI_Model
 	$insert_data = array();
 
         // get store information check if info not is empty
-        if($stores = $this->get_woocommerce_stores($storeid = 2))
+        if($stores = $this->get_woocommerce_stores())
         {
             foreach($stores as $store)
             {
