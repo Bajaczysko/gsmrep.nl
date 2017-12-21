@@ -1,0 +1,10 @@
+<?php
+
+require_once('application/libraries/phpass/PasswordHash.php');
+$hash_token = new PasswordHash(8, FALSE);
+$database_salt = 'BCkXgdYjmy';
+$token = '8^Sc7)\WEv_^}9K[';
+$static_salt = 'IUEJCVYMhyfKrjIf4s3cReXcPp8ZFbNNm3b7DdR5JeWFksPlsEITuCtklwKsIwwWWQzVUhzBvo63Ugce74Z4D3LqaILuHhSZQ2QXxNKSWrfE2sP2vXugdBudKTXpCTKQQqs9pPs8nuJhTzsR9sMHmVEeFJNCXwPSFPoNVdHnpItqemF1nTTzTcq3FwLuPWu6P8YxtLY9aSMRFAo3Aj78UK2YarV25hj8k1xK3gZh6gBwCYlCYgkEhX85KoSifZTHTaEzINXDPWNxT5tvqdxJn2nRyerV9bcCv6y4IdZXUrVqEm5z2pG5R1CFaJ6GRqt4R5yr7bWIXTeUDimG54hVjX2ixN2JqyK9zqkvE4u6nSZHQZRiiinhzKRxE4yAzyIVqFj5dJroQLvtJ2JUfnkGxzqCNykYTBWH67XWom9wTB993ShMnnbNiGsj1VzsAoEu6RkFlT4qnuuqJfTkF6381MlERny8XPF3o2YqnkvXBlgyhR5hnrc37mo6JMD95Q5C';
+echo $hash_token->HashPassword($database_salt . $token . $static_salt);
+
+?>
